@@ -8,3 +8,5 @@ print(myDict['Harry'])
 
 
 
+
+print(myDict).keys()

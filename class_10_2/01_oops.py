@@ -1,16 +1,20 @@
-class number:
-    def sum(self):
-        return self.a + self.b
+class Item:
+    def __init__(self,name,price,quantity):
+        print(f"An instance created : {name}")
+        self.name = name
+    def calculate_total_price(self,x,y):
+        return x*y
+item1 = Item("Phone")
+item1.name = "Phone"
+item1.price = 100
+item1.quantity = 5
+print(item1.calculate_total_price(item1.price,item1.quantity))
 
-num = number()
-num.a = 12
-num.b = 34
+item2 = Item("Laptop",100,5)
+item2.name = "Laptop"
+item2.price = 1000
+item2.quantity = 6
+print(item2.calculate_total_price(item2.price,item2.quantity))
 
-s  = num.sum()
-print(s)
-
-a= 12
-b = 34
-
-print("The sum of a and b is ",a+b)
-
+print(item1.name)
+print(item2.name)

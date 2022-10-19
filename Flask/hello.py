@@ -13,8 +13,9 @@ if __name__ == "main":
 # export FLASK_APP=hello.py
 # flask run
 
-
-
+# To start a Flask Application
+# if __name__ == "__main__":
+#     app.run()
 
 
 # Python Decorator Function

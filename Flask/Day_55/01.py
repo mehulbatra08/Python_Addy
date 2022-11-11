@@ -1,22 +1,15 @@
-from flask import Flask
+from flask import Flask,render_template,request
 
 app = Flask(__name__)
 
+import random
+
 
 @app.route('/')
-
-def hello_world():
-    return '<h1 style = "text-align: center"> Hello, World </h1>'\
-    '<p>Hello Everyone My Name is Mehul and I want to be a Python Developer!</p>'\
-    '<img src = "https://media.giphy.com/media/KizGHRfDRo3y8u6Sf2/giphy.gif" width = 200>'
-@app.route("/bye")
-def bye():
-    return "Bye!"
-@app.route("/<name>/<number>")
-def greet(name,number):
-    return f"Hello there {name} You are {number}!"
-
- 
+def helloworld():
+    name = request.args.get("name")
+    return render_template("index.html",name=name)
+    
+    
 if __name__ == "__main__":
     app.run(debug = True)
-bye()

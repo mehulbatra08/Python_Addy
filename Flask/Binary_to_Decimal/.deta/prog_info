@@ -1,0 +1,1 @@
+{"id":"5271fdde-2519-4174-b4db-597a3dd0ffe4","space":38049,"runtime":"python3.9","name":"Binary_to_Decimal","path":"mv8uqe","project":"d0k3xndc","account":"144798365827","region":"ap-south-1","deps":["flask"],"envs":null,"public":true,"log_level":"off","cron":""}

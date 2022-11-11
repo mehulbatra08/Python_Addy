@@ -1,0 +1,1 @@
+{"id":"769f8e8f-9974-4abe-b8f6-ecbb7e4d8844","space":38049,"runtime":"python3.9","name":"To-Do-Project","path":"44gf04","project":"d0k3xndc","account":"144798365827","region":"ap-south-1","deps":["flask","Flask-SQLAlchemy","flask_sqlalchemy"],"envs":null,"public":true,"log_level":"debug","cron":""}

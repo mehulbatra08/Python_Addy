@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>lala</title>
+</head>
+<body>
+   
+
+    <video autoplay muted loop id="myVideo">
+        <source src="static/goku.mp4" type="video/mp4">
+      </video>
+      <h1 class="text-center">Random Password Generator</h1>
+ 
+ <h2 class="text-center">{{final_password}}</h2>
+
+
+
+
+ <style>
+
+ 
+   #myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+   }
+    h1{
+            font-size: 85px;
+            color: aliceblue;
+            text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+            margin-top: 35vh;
+
+        }
+    h2{
+        color: aliceblue;
+        text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+        font-size: 50px;
+    }
+    
+ </style>
+ <div class="text-center">
+    <button onClick="window.location.reload()" type="button" class="btn btn-outline-light btn-lg">Click here to Generate the Password</button>
+  </div>
+</div>
+
+</body>
+</html>
+<!-- onClick="window.location.reload();" -->

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+         body{
+            background-image: url("https://w.wallha.com/ws/14/kKRELHhA.png");
+            background-size: cover;
+        }
+        td{
+            color: aliceblue;
+        }
+        label{
+            color: aliceblue;
+        }
+        h1{
+            color: aliceblue;
+        }
+        .display-5{
+            color: aliceblue;
+
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="display-1" style="display: flex; justify-content: center;" >Resume Generator</h1>
+
+<center>
+
+    <div class="container" style="background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );" >
+        <form action="output" method="post" class="form-group" >
+            <div class="display-5">Basic Details</div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="exampleInputFname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputFname" aria-describedby="emailHelp" name="fname" >
+                    
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="exampleInputLname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputLname" aria-describedby="emailHelp" name="lname" >
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="Designation" class="form-label">Designation</label>
+                    <input type="text" class="form-control" id="Designation" aria-describedby="emailHelp" name="mydesignation" >
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="email" class="form-label">email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="my_email" >
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="mygender" class="form-label"> <b>Gender</b> </label>
+                    <input type="radio" name= "mygender" value="Male" id=""> Male 
+                            <input type="radio" name= "mygender" value="Female" id=""> Female
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="bday" class="form-label">Birth Year</label>
+                    <input type="number" class="form-control" id="bday" aria-describedby="emailHelp" name="bday" >
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="col-3">
+                    <label for="Age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="email" aria-describedby="emailHelp" name="myage" value="myage" >
+                </div>
+            </div>
+            <div class="display-5">Education Qualifications</div>
+            
+            <div class="col">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Year Of Passing</th>
+                        <th scope="col">Passing Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Class 10</td>
+                        <td> <input type="date" name="tenyop" id="">  </td>
+                        <td> <input type="number" name="tennumber" id=""> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Class 12</td>
+                        <td> <input type="date" name="twelthyop" id=""> </td>
+                        <td> <input type="number" name="twelthnumber" id=""> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Undergraduation</td>
+                        <td> <input type="date" name="ugyop" id=""> </td>
+                        <td> <input type="number" name="ugnumber" id="">  </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Postgraduation</td>
+                        <td> <input type="date" name="pgyop" id=""> </td>
+                        <td> <input type="number" name="pgnumber" id=""> </td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+               
+                
+            </div>
+            <div class="display-5">About You</div>
+            <div class="mb-3">
+
+                <div class="col-5">
+    
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="mysummary"></textarea>
+                        <label style="color: black;" for="floatingTextarea2">Explain About Yourself?Your Previous Experience</label>
+                      </div>
+                </div>
+            </div>
+
+            <div class="display-5">Skills</div>
+
+           <div class="row">
+            <div class="col">
+
+                <input type="text" placeholder="Skill-1" name="skillonename">
+                <select name="skillone" id="">
+                    <option value="Select From Range 1-10">Select from Range 1-10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+           </div>
+
+           <div class="row">
+            <div class="col">
+
+                <input type="text" placeholder="Skill-2" name="skilltwoname">
+                <select name="skilltwo" id="">
+                    <option value="1">Select from Range 1-10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                </select>
+            </div>
+           </div>
+
+           <div class="row">
+            <div class="col">
+
+                <input type="text" placeholder="Skill-3" name="skillthreename">
+                <select name="skillthree" id="">
+                    <option value="1">Select from Range 1-10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                </select>
+            </div>
+           </div>
+
+           <div class="row">
+            <div class="col">
+
+                <input type="text" placeholder="Skill-4" name="skillfourname">
+                <select name="skillfour" id="">
+                    <option value="1">Select from Range 1-10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+           </div>
+           <br>
+           <input type="submit" name="submit" value="submit" type="button" class="btn btn-primary btn-lg" >
+           <br>
+           
+          </form>
+          <br>
+    </div>
+
+    <div style=" display: flex; align-items: flex-start; color: aliceblue; " >Made with &#9829; By Mehul Batra</div>
+
+
+</center>
+
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

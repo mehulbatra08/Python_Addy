@@ -1,0 +1,1 @@
+{"id":"b57b9496-9643-4016-b2a1-ace16ffb1b0c","space":38049,"runtime":"python3.9","name":"Resume-Builder","path":"nhfblm","project":"d0k3xndc","account":"144798365827","region":"ap-south-1","deps":["flask"],"envs":null,"public":true,"log_level":"off","cron":""}

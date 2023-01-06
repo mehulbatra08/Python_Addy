@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+
+    <title>Resume Builder</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            color: aliceblue;
+            text-shadow: rgb(0, 0, 0) 3px 1px 1px;
+            font-size: 70px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+
+        }
+        body{
+            background-image: url("https://w.wallha.com/ws/14/kKRELHhA.png");
+            background-size: cover;
+        }
+        td{
+            color: aliceblue;
+        }
+       
+    
+    </style>
+</head>
+<body>
+
+
+    <hr>
+    <h1>Resume Builder</h1>
+    <hr>
+    <div class="container">
+
+        <table style="background: rgba( 255, 255, 255, 0.3 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 7px );
+        -webkit-backdrop-filter: blur( 7px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );">
+
+            <form action="output" method="post" class="form-group">
+                <tr>
+                    <td colspan="4" > <center> <b>Basic Information</b> </center> </td>
+                </tr> 
+                <tr>
+                    <td> <label >First Name</label> </td>
+                    <td> <input type="text" name="fname" id=""> </td>
+                    <td> <label >Last Name</label> </td>
+                    <td> <input type="text" name="lname" id=""> </td>
+                </tr> 
+            
+                <tr>
+                    <td> <label >E-Mail</label> </td>
+                    <td> <input type="email" name="my_email" id=""> </td>
+ 
+                </tr>
+                <tr>
+                    <td> <label >Designation</label> </td>
+                    <td> <input type="text" name="mydesignation" id=""> </td>
+ 
+                </tr>
+                <tr>
+                    <td> <label >Gender</label> </td>
+                    <td> <input type="radio" name= "mygender" value="Male" id=""> Male 
+                        <input type="radio" name= "mygender" value="Female" id=""> Female
+                    
+                    </td>
+ 
+                </tr>
+                <tr>
+                    <td> <label>Age</label> </td>
+                    <td> <input type="number" name="myage" value="myage"> </td>
+ 
+                </tr>
+                <tr>
+                    <td> <label>Date of Birth</label> </td>
+                    <td> <input type="date" name="bday" value="bday"> </td>
+ 
+                </tr>
+                <tr>
+                    <td colspan="4" > <center> <b>Education Qualification</b> </center> </td>
+                </tr> 
+                <tr>
+                    <td >Class </td>
+                    <td >Year of Passing</td>
+                    <td >Percentage</td>
+                </tr> 
+                <tr>
+                    <td><label >Class 10</label><input type="checkbox"></td>
+                    <td> <input type="date" name="tenyop" > </td>
+                    <td> <input type="number" name="tennumber" id=""> </td>
+ 
+                </tr>
+                <tr>
+                    <td><label >Class 12</label><input type="checkbox"></td>
+                    <td> <input type="date" name="twelthyop" > </td>
+                    <td> <input type="text" name="twelthnumber" > </td>
+ 
+                </tr>
+                <tr>
+                    <td><label >Undergraduation</label><input type="checkbox"></td>
+                    <td> <input type="date" name="ugyop" id=""> </td>
+                    <td> <input type="" name="ugnumber" id=""> </td>
+ 
+                </tr>
+                <tr>
+                    <td><label >Postgraduation</label><input type="checkbox"></td>
+                    <td> <input type="date" name="pgyop" id=""> </td>
+                    <td> <input type="text" name="pgnumber" id=""> </td>
+ 
+                </tr>
+                <tr>
+                    <td colspan="4" > <center> <b>Professional Qualities</b> </center> </td>
+                </tr> 
+
+
+                <tr>
+                    <td>Summary</td>
+                    <td colspan="4"> <textarea rows = "5" cols = "40" name="mysummary" id="" placeholder="How can you describe yourself?" ></textarea> </td>
+                </tr>
+                <tr>
+                    <td colspan="4" > <center> <b>Skills</b> </center> </td>
+                </tr> 
+                <tr>
+                    <td >Skill Name</td>
+                    <td >You Skill Rating</td>
+                    
+                </tr>
+                <tr>
+                    <td > <input type="text" placeholder="Skill-1" name="skillonename"> </td>
+                    <td > <select name="skillone" >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select> </td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td > <input type="text" placeholder="Skill-2" name="skilltwoname"> </td>
+                    <td > <select name="skilltwo" >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select> </td>
+                   
+                    
+                </tr>
+                <tr>
+                    <td > <input type="text" placeholder="Skill-3" name="skillthreename"> </td>
+                    <td > <select name="skillthree" >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td > <input type="text" placeholder="Skill-4" name="skillfourname"> </td>
+                    <td > <select name="skillfour" >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="40">40</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                        <option value="70">70</option>
+                        <option value="80">80</option>
+                        <option value="90">90</option>
+                        <option value="100">100</option>
+                    </select> </td>
+                    
+                    
+                </tr>
+                <br>
+                
+                <tr>
+                    
+                    <td>   <input type="submit" name="submit" value="submit" class="btn btn-primary btn-lg" > </td>
+                </tr>
+              
+            </form>
+        </table>
+
+ 
+    </div>
+    
+
+
+   
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</html>
+
+
+
+
+

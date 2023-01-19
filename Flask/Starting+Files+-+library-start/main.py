@@ -1,5 +1,5 @@
 from flask import Flask
-import sqlite3
+
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ class Book(db.Model):
     author = db.Column(db.String(80),unique = True,nullable = False)
     rating = db.Column(db.Float,unique = True,nullable = False)
 
-db.create_all()
+# db.create_all()
 
 
 #Create a Record

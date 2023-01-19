@@ -1,0 +1,13 @@
+Open the Django Folder and run the command -> django-admin startproject <name>
+(Note-If we write the code ->django-admin, then we will get many options and commands related to it)
+Inside the folder which is created create a new file name views.py in it
+Now go to the url.py file and write on top of it "from . import views", Here we are Linking views and url files
+Create a path by writing the command in in urls(urlpatterns) "path("", views.index, name="index")".
+Simultaneously, in the views.py write the following command 
+                                        
+                                        "from django.http import HttpResponse
+                                        def index(request):
+                                            return HttpResponse("Hello world")"
+
+                                            
+

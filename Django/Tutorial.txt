@@ -1,0 +1,81 @@
+Open the Django Folder and run the command -> django-admin startproject <name>
+(Note-If we write the code ->django-admin, then we will get many options and commands related to it)
+Inside the folder which is created, create a new file name views.py in it
+Now go to the url.py file and write on top of it "from . import views", Here we are Linking views and url files
+Create a path by writing the command in in urls(urlpatterns) "path("", views.index, name="index")".
+Simultaneously, in the views.py write the following command 
+                                        
+                                        "from django.http import HttpResponse
+                                        def index(request):
+                                            return HttpResponse("Hello world")"
+
+Now, to include Html templates in the project, Go to the settings.py and in the DIR list type "os.path.join(BASE_DIR, "templates")".
+and in the views.py write:
+                from django.shortcuts import render
+                "def index(request):
+                    return render(request, 'index.html')"
+
+Now if we want to add parameters in the python and access it using Jinja Templates in Html, we need to create a dictionaries For eg:
+                            Param = {"name":"mehul","place":"Mars"}
+
+<----------- Creating Forms------------->
+
+Well, Before Creating Forms we need to understand about models
+Ques- Why do we need Models?
+Ans- When we create forms and input data, that data goes into the db and for that reason we need Models
+
+BUT 
+there is not models.py file in the project
+so therefore we need to create an application inside our porject that has all the required files in it
+
+Go to terminal and type django-admin startapp <name>
+Now go the settings.py and in the installed app section
+
+Now, go to models.py and create a class by:
+
+class Contact(models.Model):
+    Name = models.CharField(max_length = 30)
+    email = models.CharField(max_length = 30)
+
+Note:- Here I have used Contact but you can use any name you want
+
+Now After creating a model I want this model to be installed
+So go to settings.py and in "INSTALLED APPS"
+paste this "application.apps.ApplicationConfig"
+
+here application is the name of the app we created by using the command startapp
+and .apps. is the syntax where as the third word i.e "ApplicationConfig" we can copy this from going to apps.py and whatever is the class name we need to put it here.
+
+
+After that use 2 commands
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+Now in my views.py I need to import that model so for that I am going to write:
+from application.models import names(Here Application is the startapp name we earlier gave and names is the name of the Class)
+
+Now in the views.py:
+
+def index(request):
+        fname = request.POST['fname]
+        lname = request.POST['lname]
+        final_details = names(First_name = fname,Last_name=lname)
+        final_details.save()
+        
+        context = {"final_details":final_details}
+        
+    return render(request,"index.html",context)
+
+    By using this we can view the Name that we just got input in our forms
+
+
+
+
+
+
+
+
+                
+
+
+

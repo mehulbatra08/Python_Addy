@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        .form-label{
+            color: #fff;
+        }
+        .result{
+            display: flex;
+            justify-content: center;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            font-size: 65px;
+            color: #fff;
+        }
+        h1{ font-family: 'Pacifico', cursive;
+        color: #fff;
+            display: flex;
+            justify-content: center;
+            font-size: 65px;
+            
+        }
+        .container{
+            width: 40%;
+            margin: 30px;
+            margin-top: 20px;
+        }
+        .card-img-top{
+            height: 250px;
+            
+        }
+        body {
+    background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: {{ final_name }}%; }
+}
+    </style>
+  </head>
+  <body  >
+    
+    <h1>Love Calculator</h1>
+    <div class="form-part">
+        <div class="container my-5 mx-auto" style=" background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );" >
+    
+            
+    
+                <img src="https://cdn2.iconfinder.com/data/icons/couple-9/256/couple_7.png" class="card-img-top" alt="..." >
+                <form method = "post" action="/" >
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"> <b>Your Name</b> </label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="fname" >
+                     
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"><b>Your Partner's Name</b> </label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" name ="lname" >
+                    </div>
+                    <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn">Calculate</button>
+                </div>
+                  </form>
+            </div>
+
+    </div>
+    
+    <h2> {{ final_name }} </h2>
+<div class="result">
+    <div class="progress">
+
+        <div class="progress-value"></div>
+      </div>
+
+</div>
+ 
+     
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    src="https://cdn.lordicon.com/ritcuqlt.js">
+</script>
+</html>

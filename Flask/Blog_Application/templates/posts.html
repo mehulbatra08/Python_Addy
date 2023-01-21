@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>MyBlog</title>
+    <style>
+      .container{
+        border-radius: 25px;
+        background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0.2599531615925058) 100%);
+padding-bottom: 75px;
+padding-top: 20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin-bottom: 30px;
+      }
+      body{
+        background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0.2599531615925058) 100%);
+      }
+      
+      .button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}    
+.content{
+    margin: 10px;
+}
+
+</style>
+</head>
+<body>
+    <h1 style="display: flex; justify-content: center; font-family: 'Pacifico', cursive; font-size: 70px;" >Your Blogs</h1>
+
+    {% for post in allcontacts %}
+    <div class="container">
+        <div class="content">
+
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.desc }}</p>
+            <form action="/delete/{{post.sno}}" method="post">
+              <input class = "button"type="submit" value="Delete">
+          </form>
+        </div>
+        
+    </div>
+    {% endfor %}
+
+  <button style=" padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;"> <a href="/"> Post Your Own Blog</a> </button>
+</body>
+
+</html>

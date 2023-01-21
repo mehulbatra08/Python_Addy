@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <form method = "post" action="/">
+        <input type="text" name="name">
+        <input type="text" name="phone">
+        <button type="submit">Submit Now</button>
+    </form>
+    <a href="/delete">Delete</a>
+    {% for todo in allcontacts %}
+   
+    <p>{{todo.name}}</p>
+    <p>{{todo.phone}}</p>
+      
+      
+  {% endfor %} 
+</body>
+</html>
